@@ -1,0 +1,22 @@
+<div class="row">
+
+    <li *ngFor="let thread of threads ">
+  		{{ thread.name }}
+	</li>
+
+ 
+</div>
+<div class="panel-footer">
+        <div class="input-group">
+          <input type="text"
+          class="chat-input"
+          placeholder="Write your message here..."
+          (keydown.enter)="onEnter($event)"
+          [(ngModel)]="draftMessage" />
+          <span class="input-group-btn">
+            <button class="btn-chat"
+            (click)="onEnter($event)"
+            >Send</button>
+          </span>
+        </div>
+</div>
